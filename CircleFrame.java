@@ -12,7 +12,7 @@ public class CircleFrame extends JFrame {
     } // Spitfire()
     
     public static void main(String[] args) {
-//fdsafd
+
     } // main( String [] )
     
 } // Spitfire
