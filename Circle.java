@@ -8,13 +8,18 @@ import java.awt.geom.AffineTransform;
 
 public class Circle implements Colorable{
     
+    double x;
+    double y;
+    double radius;
+    private Color color;
+    
     public Circle( double x, double y, double radius) {
         
     }
 
     @Override
     public Color getColor() {
-        
+        return color;
     }
 
     @Override
