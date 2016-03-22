@@ -22,6 +22,7 @@ public class Circle implements Colorable{
         this.color = color;
     }
 
+
     @Override
     public Color getColor() {
         return color;
@@ -49,7 +50,8 @@ public class Circle implements Colorable{
         double diameter = 2 * this.radius;
         Ellipse2D e = new Ellipse2D.Double(ulx, uly, diameter, diameter);
         Shape s = transform.createTransformedShape(e);
-        g2D.draw(s);
+        g2D.setColor(color);
+        g2D.fill(s);
     }
     
 }
