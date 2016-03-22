@@ -3,7 +3,9 @@ package random_circles;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Shape;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Ellipse2D;
 
 
 public class Circle implements Colorable{
@@ -42,7 +44,12 @@ public class Circle implements Colorable{
     }
     
     public void draw( Graphics2D g2D, AffineTransform transform) {
-        
+        double ulx = this.x - this.radius;
+        double uly = this.y - this.radius;
+        double diameter = 2 * this.radius;
+        Ellipse2D e = new Ellipse2D.Double(ulx, uly, diameter, diameter);
+        Shape s = transform.createTransformedShape(e);
+        g2D.draw(s);
     }
     
 }
