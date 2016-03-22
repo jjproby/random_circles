@@ -2,8 +2,11 @@
 package random_circles;
 
 import java.awt.Color;
+import static java.awt.Color.BLUE;
+import static java.awt.Color.RED;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 
 
@@ -26,6 +29,14 @@ public class CirclePanel extends JPanel {
         Graphics2D g2D = (Graphics2D) g;
         int w = this.getWidth();
         int h = this.getHeight();
+        Circle c = new Circle(.5, .5, .5, RED);
+        AffineTransform transform = new AffineTransform();
+        AffineTransform translate = new AffineTransform();
+        AffineTransform scale = new AffineTransform();
+        translate.setToTranslation(1,1);
+        scale.setToScale(w/2, h/2);
+        transform.concatenate(scale);
+        c.draw(g2D, transform);
     }
     
 }
