@@ -9,8 +9,8 @@ import javax.swing.Timer;
 
 public class CircleFrame extends JFrame {
 
-    public static final int FRAME_WIDTH = 768;
-    public static final int FRAME_HEIGHT = 768;
+    public static final int FRAME_WIDTH = 1280;
+    public static final int FRAME_HEIGHT = 1280;
     public static final String TITLE = "Random Circles";
     
     public CircleFrame() {
